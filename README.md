@@ -11,12 +11,13 @@
                                         "Y88888P"     `"Y8888Y"'    88           88      `8b  d8'          `8b                 
 
                                                                                                                                                           
-## STOP! First you have to be familiar with this before you start
-Read and go through those Tutorials, It will make your life easier!
+## Contributors
+* **Timucin Besken**- [TimP4w](https://github.com/TimP4w)
+* **Patrick Sonderegger**- [MrDStar](https://github.com/MrDStar)
+* **Vincent Theus**- [Specter96](https://github.com/Specter96)
+* **Raffael Forrer**- [RaffaelJonas](https://github.com/RaffaelJonas)
+* **Loris Bachmann**- [JackGrant](https://github.com/JackGrant)
 
-  - Read the [Angular Docs](https://angular.io/docs/ts/latest/guide/)
-  - Do this [Angular - Getting Started Tutorial](https://angular.io/docs/ts/latest/tutorial/)
-  - Get an Understanding of [CSS](https://www.w3schools.com/css/) and [HTML](https://www.w3schools.com/html/)! 
                                                                               
 ## Prerequisites and Installation
 
