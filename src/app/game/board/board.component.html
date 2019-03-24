@@ -1,0 +1,21 @@
+<div dragScroll class="dragandscroll" [scrollbar-hidden]="true" [drag-scroll-disabled]="dragDisabled" >
+  <div id="board" class="hex-grid">
+      <div class="row maptitle"> <h1> {{board?.name}} </h1> </div>
+      <div class="" *ngFor="let row of hexGrid;
+                               let index=index;
+                               let isOdd=odd;
+                               let isEven=even;"
+                               [class.odd]="isOdd"
+                               [class.even]="isEven"
+                               (ngModelChange)="board.path = $event">
+          <div *ngFor="let space of row" class="hexagon {{space.color}} {{space.color}}str{{space.power}} {{space?.possible}}" (click)="move(space.id)">
+              <div id="hex-{{space?.id}}" class="content" [dragula]='"pieces-bag"'>
+                  {{space.power}}
+                <div id="blockade-{{space?.blockade.id}}" *ngIf="space.blockade" class="blockade {{space.blockade.color}} {{space.blockade.color}}str{{space.blockade.power}} {{space.blockade.rotation}} nodrag" [dragula]='"pieces-bag"'>{{space.blockade.power}}</div>
+                <div id="piece-{{space.occupiedBy?.id}}" *ngIf="space.occupiedBy" class="piece {{space.occupiedBy?.color}}" [class.nodrag]="space.occupiedBy?.owner.id!=userId"></div>
+              </div>
+          </div>
+      </div>
+
+  </div>
+</div>

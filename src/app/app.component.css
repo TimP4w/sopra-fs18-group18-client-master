@@ -1,0 +1,27 @@
+.footer {
+  position: absolute;
+  left: 600px;
+  color: white;
+  font-family: 'Skranji', cursive;
+  bottom: 20px;
+  text-align: center;
+}
+
+.elDorado {
+  position: relative;
+  display: block;
+  height: 768px;
+  width: 1366px;
+  margin: auto;
+  filter: sepia(0.2)
+}
+
+.loading {
+  background-color: black;
+  z-index: 99999999;
+  position: absolute;
+  display: block;
+  height: 768px;
+  width: 1366px;
+  margin: auto;
+}

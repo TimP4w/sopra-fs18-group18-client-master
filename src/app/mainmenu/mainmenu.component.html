@@ -1,0 +1,16 @@
+<div class="container">
+    <img src="../../assets/images/eldorado.png" style="margin:auto; width:100%;"/>
+    <div class="centerButtons">
+      <h1>Main Menu</h1>
+      <div>
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let game of games">{{game.name}}</li>
+        </ul>
+      </div>
+      <div *ngIf="error">{{error}}</div>
+      <div *ngIf="loading">Loading...</div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="createGame()">Create Game</button>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" [routerLink]="['/gameList']">Join Game</button>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="logout()">Logout</button>
+    </div>
+</div>

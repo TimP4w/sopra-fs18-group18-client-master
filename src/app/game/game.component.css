@@ -1,0 +1,121 @@
+.endTitle {
+    text-align: center;
+}
+
+.container {
+    position: absolute;
+    border-style: transparent;
+    border-width: 0px;
+    left: 5px;
+    width: 1356px;
+    height: 758px;
+    background-image: url('../../assets/images/tabletop.jpg');
+    background-size: 1356px 775px;
+}
+
+.waitforturn {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  height: 265px;
+  z-index: 999;
+  opacity: 0.8;
+  left: 0px;
+  background-color: black;
+  text-align: center;
+}
+
+.waitforturntext {
+    line-height: 62px;
+}
+
+.winner {
+    text-align: center;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.center {
+    width: 20%;
+    margin: auto;
+}
+
+.exitGame {
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    width: 50px;
+    height: 50px;
+    z-index: 20;
+    background-color: rgb(69, 3, 3);
+    border: solid 2px black;
+    font-family: 'Skranji', cursive;
+    color: white;
+    font-size: 30px;
+    border-radius: 4px;
+    opacity: 0.9;
+}
+.exitGame:hover {
+    background: black;
+    color: white;
+    border: solid 2px black;
+
+}
+
+.players {
+  position:absolute;
+  top: 8px;
+  left: 10px;
+  width: 800px;
+  height: 50px;
+  z-index: 15;
+}
+
+.playernamePlaceholder {
+    float: left;
+    text-align: left;
+    border: solid black 2px;
+    position: relative;
+    z-index: 10;
+    border-radius: 4px;
+    opacity: 0.9;
+}
+.nameText {
+    margin-left: 10px;
+    font-size: 20px;
+    line-height: 45px;
+    float: left;
+    text-align: left;
+    font-family: 'Skranji', cursive;
+    color: white;
+    width: 130px;
+    height: 100%;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.hat {
+    float: left;
+    background-image: url('../../assets/images/hat.png');
+    width: 50px;
+    height: 45px;
+    top: -2px;
+    background-size: 100% 100%;
+}
+
+.Green {
+    background: url("../../assets/images/boards/green_board.png");
+    background-size: 100% 100%
+}
+.Yellow {
+    background: url("../../assets/images/boards/yellow_board.png");
+    background-size: 100% 100%
+}
+.Blue {
+    background: url("../../assets/images/boards/blue_board.png");
+    background-size: 100% 100%
+}
+.Red {
+    background: url("../../assets/images/boards/red_board.png");
+    background-size: 100% 100%
+}

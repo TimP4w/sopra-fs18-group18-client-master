@@ -1,0 +1,154 @@
+.marketplace {
+    position: absolute;
+    width: 800px;
+    height: 500px;
+    background-image: url("../../../assets/images/market.png");
+    background-size: cover;
+    left: 283px;
+    border-radius: 25px;
+    overflow: hidden;
+    float: left;
+    z-index: 20;
+    overflow: auto;
+    filter: sepia(0.2);
+    border: black solid 2px;
+}
+
+/* hide scrollbar*/
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0px transparent;
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.markettitle {
+    text-align: center;
+    font-size: 24px;
+}
+
+.marketbutton {
+    position: absolute;
+    top: 501px;
+    left: 143px;
+    z-index: 20;    
+    font-family: 'Skranji', cursive;
+    color: white;
+    background-color: rgb(69, 3, 3);
+    border-radius: 4px;
+}
+
+.marketbutton:hover {
+    background: black;
+    color: white;
+
+}
+
+.marketbutton:focus {
+    outline: none;
+}
+
+.firstrow {
+    background: rgba(0,0,0,0.555);
+    width: 100%;
+    height: 170px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    position: static;
+}
+.secondrow {
+    width: 100%;
+    height: 170px;
+    margin-bottom: 50px;
+}
+.thirdrow {
+    width: 100%;
+    height: 170px;
+    margin-bottom: 28.5px;
+    margin-top: 20px;
+}
+
+.firstrowpiles {
+    background: rgba(45, 37, 37);
+    border-radius: 13px;
+    position: relative;
+    width: 100px;
+    height: 100%;
+    float: left;
+    margin-left: 28.5px;
+    border-bottom: #000 solid 3px;
+  }
+.secondrowpiles {
+    background: rgba(45, 37, 37);
+    border-radius: 13px;
+    position: relative;
+    width: 100px;
+    height: 100%;
+    float: left;
+    margin-left: 28.5px;
+}
+.thirdrowpiles {
+    background: rgba(45, 37, 37);
+    border-radius: 13px;
+    position: relative;
+    width: 100px;
+    height: 100%;
+    float: left;
+    margin-left: 28.5px;
+}
+
+.tradefield {
+    position: absolute;
+    bottom: 60px;
+    background-color: #000;
+    opacity: 0.7;
+    width: 260px;
+    height: 170px;
+}
+.sellfield {
+    position: absolute;
+    background: url("../../../assets/images/piles/droptosell.png");
+    opacity: 0.7;
+    width: 50%;
+    height: 100%;
+}
+.buyfield {
+    position: absolute;
+    left: 50%;
+    background: url("../../../assets/images/piles/droptobuy.png");
+    opacity: 0.7;
+    width: 50%;
+    height: 100%;
+}
+
+.card {
+    position: absolute;
+    padding: 25px;
+    width: 100px;
+    height: 170px;
+  }
+
+.explorer {
+    background: url("../../../assets/images/cards/Trailblazer.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.traveler {
+    background: url("../../../assets/images/cards/Traveler.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.sailor {
+    background: url("../../../assets/images/cards/Sailor.png");
+    background-repeat: no-repeat;
+    background-size: 106px 100%;
+}

@@ -1,0 +1,49 @@
+<div class="container">
+    <div *ngIf="lobbyNotFound; then notfound; else lobby"></div>
+
+    <ng-template #lobby>
+      <h1>Lobby for {{title}}</h1>
+    
+      <div *ngIf="error" class="alert alert-danger">
+        <strong>Error!</strong> {{error}}
+      </div>
+    
+      <div class="row">
+        <div class="col-md-8">
+          <h2>Players ({{game?.players.length}}/{{game?.numberPlayers}})</h2>
+          <h2>Map: {{mapChosen?.name}} | {{mapChosen?.difficulty}}</h2>
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let player of players" >{{player.name}} <label *ngIf="player?.id === game?.owner;">[Owner]</label></li>
+          </ul>
+          <button class="btn btn-lg btn-primary btn-block leave" type="submit" (click)="leaveLobby(game?.id)">Leave Game</button>
+        </div>
+    
+        <div *ngIf="!isOwner" class="col-md-4 previewplace">
+          <div class="mappreview {{mapChosen?.short}}"></div>
+        </div>
+    
+        <div *ngIf="isOwner;" class="col-md-4">
+          <h2>Game Settings</h2>
+          <label class="whitelabel" for="number_player">Number of players</label>
+          <select class ="dropdown" name="number_player" [(ngModel)]="playersChosen" (change)="onSelectPlayerNr()">
+            <option *ngFor="let val of numPlayers" [ngValue]="val" class="dropdown-option">{{val.name}}</option>
+          </select>
+          <br>
+          <label class="whitelabel" for="choose_map">Map</label>
+          <br>
+          <select class="dropdown" name="choose_map" [(ngModel)]="mapChosen" (change)="onSelectMap()">
+            <option *ngFor="let val of map_list" [ngValue]="val" class="dropdown-option">{{val.name}} – {{val.difficulty}}</option>
+          </select>
+          <div class="mappreview {{mapChosen?.short}}"></div>
+          <button class="btn btn-lg btn-primary btn-block start" type="submit" (click)="startGame()">Start Game</button>
+        </div>
+      </div>
+    
+    </ng-template>
+    
+    <ng-template #notfound>
+      <h1>Oops, couldn't find this Lobby ):</h1>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="goToMenu()">Main Menu</button>
+    </ng-template>
+    
+</div>

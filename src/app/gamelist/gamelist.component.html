@@ -1,0 +1,22 @@
+<div class="container">
+    <img src="../../assets/images/eldorado.png" style="margin:auto; width:100%;"/>
+    <div class="col-md-6 col-md-offset-3">
+      <h1>List of games</h1>
+      <div>
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let game of games">{{game.name}} - {{game.players.length}}/{{game.numberPlayers}} Players
+            <div *ngIf="game.players.length < game.numberPlayers; then thenBlock else elseBlock"></div>
+            <ng-template #thenBlock><button type="submit" (click)="join( game.id )" class="btn btn-primary btn-sm">Join</button></ng-template>
+            <ng-template #elseBlock><button class="btn btn-danger disabled btn-sm">Full</button></ng-template>
+          </li>
+        </ul>
+      </div>
+      <div *ngIf="error" class='error'>{{error}}</div>
+      <div *ngIf="loading">Loading...</div>
+    
+      <button class="btn btn-sm btn-primary btn-block" type="submit" [routerLink]="['/']">Back to Menu</button>
+      <!-- <button class="btn btn-sm btn-primary btn-block" type="submit" [routerLink]="['/login']">Logout</button> -->
+    
+    </div>
+    
+</div>

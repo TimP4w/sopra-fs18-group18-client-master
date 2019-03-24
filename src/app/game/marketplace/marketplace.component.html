@@ -1,0 +1,36 @@
+<div [@marketplaceAnimation]='state' class="marketplace" id="scrollDown">
+
+  <!-- <h2 class="markettitle">MARKETPLACE</h2> -->
+
+  <div class="thirdrow">
+    <div *ngFor="let pile of thirdRow" class="thirdrowpiles">
+      <div class="marketpile" [dragula]='"cards-bag"' >
+        <div *ngFor="let card of pile.marketPlacePile" class="card {{card?.slug}}"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="secondrow">
+    <div *ngFor="let pile of secondRow" class="secondrowpiles">
+      <div class="marketpile" [dragula]='"cards-bag"' >
+        <div *ngFor="let card of pile.marketPlacePile" class="card {{card?.slug}}"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="firstrow">
+      <div *ngFor="let pile of firstRow" class="firstrowpiles">
+        <div class="marketpile" [dragula]='"cards-bag"' >
+          <div *ngFor="let card of pile.marketPlacePile" class="card {{card?.slug}}"></div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<button class="marketbutton" id="marketButton" (click)="animateMarketplace()">Hide Marketplace</button>
+<div class="tradefield">
+    <div class="sellfield" [dragula]='"cards-bag"'>
+    </div>
+    <div id="buyfield" class="buyfield" [dragula]='"cards-bag"'></div>
+</div>

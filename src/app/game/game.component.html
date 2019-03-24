@@ -1,0 +1,48 @@
+<div class="container">
+    <div *ngIf="gameNotFound; then notfound; else game"></div>
+
+    <ng-template #game>
+      <div *ngIf="gameFinished; then finished; else playing"></div>
+    
+      <ng-template #finished>
+        <h1 class="endTitle">El Dorado has been discovered by:</h1>
+        <h2 class="winner">
+            <div *ngFor="let winner of winnerNames">
+              <div>{{winner?.name}}</div>
+            </div>
+        </h2>
+        <div class="center">
+          <img src="../../assets/images/medal.png" style="height: 400px; width: 360px; position: relative; left: -47.5px; margin-top: 5px; margin-bottom: 20px;"/>  
+          <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="exitGame()">Main Menu</button>
+        </div>
+      </ng-template>
+    
+      <ng-template class="game" #playing>
+    
+        <app-marketplace [marketId]="marketId" [updatedState]="updatedState" [updatedBuyField]="updatedBuyField"></app-marketplace>
+    
+        <div class="players">
+          <div *ngFor="let player of players" class="playernamePlaceholder {{player?.color}}">
+              <div class="nameText">{{player?.name}}</div>
+              <div *ngIf="player?.isCurrentTurn" class="hat"></div>
+          </div>
+        </div>
+    
+        <div class="map">
+            <app-board [id]="boardId" [updatedMoves]="possibleMoves"></app-board>
+        </div>
+        <button class="exitGame" (click)="reallyQuit()">X</button>
+    
+        <div *ngIf="!isCurrentTurn" class="waitforturn"> <h1 class="waitforturntext">Wait for your turn...</h1> </div>
+        <app-expeditionboard [gameId]="gameId" (possibleMovesUpdated)="movesUpdated($event)" (marketStateUpdated)="stateUpdated($event)" (buyFieldUpdated)="fieldUpdated($event)"></app-expeditionboard>
+    
+    
+      </ng-template>
+    </ng-template>
+    
+    <ng-template #notfound>
+      <h1>Oops, couldn't find this game ):</h1>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="goToMenu()">Main Menu</button>
+    </ng-template>
+        
+</div>

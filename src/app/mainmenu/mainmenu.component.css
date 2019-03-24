@@ -1,0 +1,15 @@
+.centerButtons {
+    width: 20%;
+    margin: auto;
+    text-align: center;
+}
+.container {
+    position: absolute;
+    border-style: transparent;
+    border-width: 0px;
+    left: 5px;
+    width: 1356px;
+    height: 758px;
+    background-image: url('../../assets/images/map.jpg');
+    background-size: 1356px 775px;
+}

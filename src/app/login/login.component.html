@@ -1,0 +1,22 @@
+<div class="container">
+    <img src="../../assets/images/eldorado.png" style="margin:auto; width:100%;"/>
+    <div class="form-signin">
+      <h2 class="form-signin-heading">Login</h2>
+      <label for="username" class="sr-only">Username</label>
+      <input id="username" type="text" class="form-control" placeholder="username"  [(ngModel)]="user.username" (keyup.enter) = "login()" />
+      <br>
+      <div *ngIf="error" class='error'>{{error}}</div>
+      <div *ngIf="loading">Loading...</div>
+      <div class="row">
+        <div class="col-md-6">
+          <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="login()">Login</button>
+        </div>
+        <div class="col-md-6">
+          <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="goToCreateUser()">Register</button>
+        </div>
+      </div>
+      <br>
+      <a class ="btn btn-lg btn-primary btn-block"target="_blank" href="https://www.ravensburger.us/spielanleitungen/ecm/Spielanleitungen/26754%20anl%201741342.pdf?ossl=pds_text_Spielanleitung">Game manual</a>
+    </div>
+    
+</div>

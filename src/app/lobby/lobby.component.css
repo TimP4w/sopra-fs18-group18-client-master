@@ -1,0 +1,87 @@
+.whitelabel {
+  color: white;
+  font-family: 'Skranji', cursive;
+}
+.container {
+    position: absolute;
+    border-style: transparent;
+    border-width: 0px;
+    left: 5px;
+    width: 1356px;
+    height: 758px;
+    background-image: url('../../assets/images/map.jpg');
+    background-size: 1356px 775px;
+}
+.list-group-item {
+    background: black;
+    color: white;
+    font-family: 'Skranji', cursive;
+}
+
+select {
+    background: black;
+    color: white;
+    font-family: 'Skranji', cursive;
+    outline: none;
+}
+
+/* can't figure out how to change style of options */
+option {
+    background: black;
+    color: white;
+    font-family: 'Skranji', cursive; 
+}
+
+.mappreview {
+    position: relative;
+    border: solid 2px black;
+    border-radius: 4px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 260px;
+    height: 200px;
+    background: black;
+}
+
+.hog {
+    background: url("../../assets/images/maps/hillsofgold.png");
+    background-size: 100% 100%;
+}
+
+.hs {
+    background: url("../../assets/images/maps/homestretch.png");
+    background-size: 100% 100%;
+}
+
+.wp {
+    background: url("../../assets/images/maps/windingpaths.png");
+    background-size: 100% 100%;
+}
+
+.se {
+    background: url("../../assets/images/maps/serpentine.png");
+    background-size: 100% 100%;
+}
+
+.sw {
+    background: url("../../assets/images/maps/swamplands.png");
+    background-size: 100% 100%;
+}
+
+.wc {
+    background: url("../../assets/images/maps/witchscauldron.png");
+    background-size: 100% 100%;
+}
+
+.mi {
+    background: url("../../assets/images/maps/mini.png");
+    background-size: 100% 100%;
+}
+
+.start, .leave {
+    width: 260px;
+}
+
+.previewplace {
+    top: 96px;
+}

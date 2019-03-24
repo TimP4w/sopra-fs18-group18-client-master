@@ -1,0 +1,25 @@
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Skranji" rel="stylesheet">
+</head>
+
+
+<div class="elDorado">
+
+   <div *ngIf="!isConnected" class="loading">
+      <h1>Waiting for server connection... Connection status: {{websocketConnection}}</h1>
+    </div>
+   <div class="container">
+          <!-- <audio autoplay loop>
+                  <source src="../../assets/music/Inka Marka - Loy Loy Loy.mp3" type="audio/mp3" />
+          </audio> -->
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+  </div>
+  <div class="footer">
+      <span>{{footer}}</span>
+      <br />
+      <!-- Only for debug, remove for production! -->
+      <span> Connection {{websocketConnection}}</span>
+  </div>
+</div>

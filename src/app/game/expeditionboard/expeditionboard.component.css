@@ -1,0 +1,276 @@
+.visible {
+  display: none;
+}
+
+.expboard {
+    position: absolute;
+    bottom: 60px;
+    width: 800px;
+    height: 170px;
+    background: black;
+    left: 280px;
+    border-radius: 25px;
+    overflow: hidden;
+    float: left;
+    filter: sepia(0.2);
+}
+
+.info  {
+    position: absolute;
+    bottom: 262px;
+    left: 1086px;
+    z-index: 20;
+    background-color: #000;
+    opacity: 0.7;
+    width: 265px;
+    height: 250px;
+    font-family: 'Skranji', cursive;
+    color: white;
+}
+
+.stats {
+    position: absolute;
+    top: -20px;
+    margin-left: 5px;
+}
+
+.logText {
+    overflow: auto;
+    height: 200px;
+    width: 250px;
+
+}
+
+/* hide scrollbar*/
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px transparent;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.button {
+    position: relative;
+    background-color: rgba(69, 3, 3, 1);
+    font-family: 'Skranji', cursive;
+    color: white;
+    left: 172px;
+    z-index: 300;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background: black;
+    color: white;
+
+}
+
+.button:focus {
+    outline: none;
+}
+
+.drawpilefull {
+    background: rgb(0, 255, 157);
+    position: relative;
+    width: 106px;
+    height: 100%;
+    float: left;
+}
+.drawpileempty {
+    background: rgb(255, 0, 212);
+    position: relative;
+    width: 106px;
+    height: 100%;
+    float: left;
+}
+
+.handpile {
+    float: left;
+    width: 588px;
+}
+
+.handpile ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+#hand li {
+    background-size: 106px 170px;
+    width: 106px;
+    height: 170px;
+}
+
+.discardpile {
+    background: url("../../../assets/images/piles/droptodiscard.png");
+    position: relative;
+    width: 132px;
+    height: 100%;
+    float: right;
+}
+
+.discard {
+    position: relative;
+    left: 14px;
+    width: 106px;
+    height: 100%;
+}
+
+.sellCard {
+    position: absolute;
+    top: 595px;
+    left: 744px;
+}
+
+.cardcount {
+    position: relative;
+    width: 100px;
+    z-index: 10;
+}
+
+.remove {
+    position: absolute;
+    bottom: 10px;
+    left: 95%;
+    width: 100px;
+    height: 100px;
+    background: url("../../../assets/images/recycle-bin.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.playedcards {
+  position: absolute;
+  height: 170px;
+  bottom: 60px;
+  width: 260px;
+  left: 1085px;
+  background-color: #000;
+  opacity: 0.7;
+}
+
+.playcards {
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    width: 1366px;
+    z-index: 999;
+}
+
+.playcard {
+    position: relative;
+    float: left;
+    background: url("../../../assets/images/drops/droptoplay.png");
+    z-index: 20;
+    opacity: 0.8;
+    height: 500px;
+    width: 50%;
+}
+.middleOfPlaycard {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+}
+
+.playactioncard {
+    position: relative;
+    float: right;
+    background: url("../../../assets/images/drops/playaction.png");
+    z-index: 20;
+    opacity: 0.8;
+    height: 500px;
+    width: 50%;
+}
+.middleOfPlayactioncard {
+    position: absolute;
+    top: 200px;
+    left: 700px;
+}
+
+.Green {
+    background: url("../../../assets/images/boards/green_board.png");
+    background-size: 100% 100%
+}
+.Yellow {
+    background: url("../../../assets/images/boards/yellow_board.png");
+    background-size: 100% 100%
+}
+.Blue {
+    background: url("../../../assets/images/boards/blue_board.png");
+    background-size: 100% 100%
+}
+.Red {
+    background: url("../../../assets/images/boards/red_board.png");
+    background-size: 100% 100%
+}
+
+.card {
+    position: relative;
+    border: solid 2px transparent;
+    padding: 25px;
+    width: 100px;
+    height: 170px;
+    float: left;
+}
+
+.smallcard {
+    position: relative;
+    border: solid 2px transparent;
+    padding: 25px;
+    width: 50px;
+    height: 80px;
+    float: left;
+}
+
+.card:hover {
+    border: solid 2px white;
+}
+
+
+.endTurnButton {
+    position: absolute;
+    top: 503px;
+    right: 300px;
+    font-family: 'Skranji', cursive;
+    color: white;
+    background-color: rgb(69, 3, 3);
+    border-radius: 4px;
+
+}
+
+.endTurnButton:hover {
+    background: black;
+    color: white;
+
+}
+
+.endTurnButton:focus {
+    outline: none;
+}
+
+.blockadeCount {
+    font-family: 'Skranji', cursive;
+    color: white;
+    position: absolute;
+    bottom: 230px;
+    left: 300px;
+
+}
+
+.currentBalance {
+    font-family: 'Skranji', cursive;
+    color: white;
+    position: absolute;
+    left: 22px;
+    bottom: 230px;
+}

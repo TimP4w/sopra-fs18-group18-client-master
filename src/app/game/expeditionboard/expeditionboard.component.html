@@ -1,0 +1,65 @@
+
+
+<div *ngIf="isPlayingCard" class="playcards">
+  <div class="playcard" [dragula]='"cards-bag"'></div>
+  <div [ngClass]="{'visible' : !isActionCard}" class="playactioncard" [dragula]='"cards-bag"'></div>
+</div>
+
+<!-- Credit: coursetro.com - Angular 4 Animation Tutorial by Gary Simon -->
+<div [@playCardAnimation]="state1" class="middleOfPlaycard card {{this?.cardToMove1}}"></div>
+<div [@playActioncardAnimation]="state2" class="middleOfPlayactioncard card {{this?.cardToMove2}}"></div>
+<div [@sellCardAnimation]="state3" class="sellCard card {{this?.cardToMove3}}"></div>
+
+<label class="currentBalance">Balance: {{expBoard?.goldBalance}}</label>
+<label class="blockadeCount">Blockades won: {{expBoard?.blockadesWon.length}}</label>
+<button class="endTurnButton" (click)="nextTurn()">End Turn</button>
+
+<div class="expboard {{expBoard?.color}}">
+  <div class="handpile" [dragula]='"cards-bag"' >
+      <!-- @drawcards -->
+      <div *ngFor="let card of handPile" class="card {{card?.slug}}"></div>
+  </div>
+
+  <div class="discardpile">
+    <div class="discard" [dragula]='"cards-bag"'>
+      <div *ngFor="let card of discardPile" class="card {{card?.slug}}"></div>
+    </div>
+  </div>
+
+</div>
+
+
+<div *ngIf="!isPlayingCard" class="info">
+
+    <button (click)="showLog()" class="button">Log</button>
+    <button (click)="showStats()" class="button">Stats</button>
+
+    <div *ngIf="logVisible" class="stats">
+      <h2> Log </h2>
+      <div class="logText" id="scrollDown2">
+        <p *ngFor="let log of logs">
+          {{log?.message}}
+        </p>
+      </div>
+    </div>
+
+    <div *ngIf="!logVisible" class="stats">
+      <h2> Stats </h2>
+      <div class="logText">
+        <p>Blockades won: {{expBoard?.blockadesWon.length}}</p>
+        <p>Cards in DiscardPile: {{discardPile?.length}} </p>
+        <p>Cards in DrawPile: {{drawPile?.length}} </p>
+        <p>Balance: {{expBoard?.goldBalance}} </p>
+        <p>Can remove: {{expBoard?.canRemove}} Cards</p>
+        <p>Can buy: {{expBoard?.canBuy}} Cards for free</p>
+        <p>Can move by one for free: {{expBoard?.canMove}}</p>
+      </div>
+    </div>
+
+</div>
+
+<div class="playedcards">
+  <div *ngFor="let card of playedCardsPile" class="smallcard {{card?.slug}}"></div>
+</div>
+
+<div  [ngClass]="{'visible' : !expBoard?.canRemove}" class="remove" [dragula]='"cards-bag"'> </div>

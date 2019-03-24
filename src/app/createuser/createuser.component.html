@@ -1,0 +1,28 @@
+<div class="container">
+    <img src="../../assets/images/eldorado.png" style="margin:auto; width:100%;"/>
+    <div class="form-signin">
+      <h2 class="form-signin-heading">Create User</h2>
+      <label for="name" class="sr-only">User</label>
+      <input id="name" type="text" class="form-control" placeholder="name" [(ngModel)]="user.name" autofocus>
+      <label for="username" class="sr-only">Username</label>
+      <input id="username" type="text" class="form-control" placeholder="username"  [(ngModel)]="user.username">
+    <br>
+      <div *ngIf="error" class='error'>{{error}}</div>
+      <div *ngIf="loading">Loading...</div>
+      <div class="row">
+        <div class="col-md-6">
+          <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="create()">Create User</button>
+        </div>
+        <div class="col-md-6">
+          <button class="btn btn-lg btn-primary btn-block" type="reset" (click)="clearfields()">Clear</button>
+        </div>
+        <div class="col-md-6">
+          <button class="btn btn-lg btn-primary btn-block" type="button" (click)="genName()">Random</button>
+        </div>
+        <div class="col-md-6">
+          <button class="btn btn-lg btn-primary btn-block" type="button" (click)="goToLogin()">Back</button>
+        </div>
+      </div>
+      <br>
+    </div>
+</div>
